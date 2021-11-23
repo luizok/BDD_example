@@ -8,6 +8,13 @@ def before_feature(context, feature):
         context.db = db
         context.exception = None
 
-        return context
+    return context
+
+
+def after_scenario(context, scenario):
+
+    # TODO: Find a better way to check for exception attr
+    if 'exception' in dir(scenario):
+        context.exception = None
 
     return context

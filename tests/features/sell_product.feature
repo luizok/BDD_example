@@ -1,4 +1,3 @@
-@fixture.setup_db
 Feature: Venda de um produto
 
     Scenario: É realizado a venda de um produto com sucesso

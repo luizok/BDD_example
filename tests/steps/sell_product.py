@@ -3,16 +3,6 @@ import behave as bdd
 import pseudodb as pdb
 
 
-@bdd.fixture
-def setup_db(context):
-
-    db = pdb.PseudoDatabase()
-    context.db = db
-    context.exception = None
-
-    return context
-
-
 @bdd.given('Um estoque de {quantity:d} {product:w}')
 def _(context, quantity, product):
 

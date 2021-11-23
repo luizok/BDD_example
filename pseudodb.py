@@ -32,11 +32,7 @@ class PseudoDatabase:
 
     def is_product_available(self, product_name: str) -> bool:
 
-        try:
-            _ = self.products[product_name]
-            return True
-        except KeyError:
-            return False
+        return product_name in self.products
 
     def stock_size(self, product_name: str) -> bool:
 
